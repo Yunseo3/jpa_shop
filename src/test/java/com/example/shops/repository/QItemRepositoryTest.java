@@ -102,7 +102,7 @@ class QItemRepositoryTest {
     }
 
     @Test
-    @DisplayName("가격 LessThan 테스트")
+    @DisplayName("가격 LessThan 테스트") //pr
     public void findByItemDetailTest() {
         this.createItemList();
         List<Item> itemList = itemRepository.findByItemDetail("테스트 상품 상세 설명");
