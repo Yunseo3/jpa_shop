@@ -1,9 +1,8 @@
-package com.example.shops.repositorys;
+package com.example.shops.repository;
 
 import com.example.shops.constant.ItemSellStatus;
 import com.example.shops.entity.Item;
 import com.example.shops.entity.QItem;
-import com.example.shops.repository.ItemRepository;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +25,7 @@ class QItemRepositoryTest {
 
 
     @Autowired
-    JPAQueryFactory queryFactory;
+    private JPAQueryFactory queryFactory;
 
     @PersistenceContext
     EntityManager em;

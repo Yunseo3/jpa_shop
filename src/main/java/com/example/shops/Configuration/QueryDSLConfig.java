@@ -1,2 +1,17 @@
-package com.example.shops.Configuration;public class QueryDSLConfig {
+package com.example.shops.Configuration;
+
+import com.querydsl.jpa.impl.JPAQueryFactory;
+import jakarta.persistence.EntityManager;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class QueryDSLConfig {
+
+    @Autowired private EntityManager em;
+    @Bean
+    public JPAQueryFactory jpaQueryFactory() {
+        return new JPAQueryFactory(em);
+    }
 }
